@@ -1,6 +1,7 @@
 const request = require('request');
 const fs = require('fs');
 const chalk = require('chalk');
+const mongodb = require('./utils/mongodb');
 
 const user = JSON.parse(fs.readFileSync('./user.json'));
 const userRequests = user.serviceRequests;
