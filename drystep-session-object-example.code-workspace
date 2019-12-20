@@ -1,0 +1,168 @@
+[
+
+
+// USER OBJECT
+{
+    "userID": "abc",
+    "customerQuality": 1,
+    "notes":["This is a note", "This is another note"],
+    "businessName":"",
+    "primaryContact": {
+        "firstName":"Scott",
+        "lastName":"Miller",
+        "phone":"614-555-1234",
+        "secondaryPhone":"614-555-2345",
+        "email":"scott@example.com",
+        "notes":[]
+    },
+    "secondaryContact:": {
+        "firstName":"Kathleen",
+        "lastName":"Miller",
+        "phone":"614-555-3245",
+        "secondaryPhone":"614-555-2345",
+        "email":"kathleen@example.com",
+        "notes":[]
+    },
+    "mainAddress":{
+        "street":"1111 Street Name",
+        "streetPlus":"Apartment C",
+        "city":"Columbus",
+        "state":"Ohio",
+        "zip":"43229",
+        "county":"Franklin"
+    },
+    "serviceRequests":["1234", "5432"]
+},// ends user object
+
+
+
+
+// SERVICE REQUEST OBJECT
+{
+    "requestID":"1234",
+    "timestamp":"",
+    "registered":true,
+    "user":"abc",
+    "recover":"oranges",//the thought here is for there to be a field that the user can fill in a "recovery word" in case the session is left early. If the database is being synced in real-time, this recover word - along with another authentication like the email address - would allow a user to return to the session later without losing everything they already filled out
+    "contact":{
+        //If it's a registered user, contact information will be able to be auto-filled by user primary or secondary contact person's information and/or main address. In the example below, it has the primary contact person's info and the main address
+        "firstName":"Scott",
+        "lastName":"Miller",
+        "phone":"614-555-1234",
+        "secondaryPhone":"614-555-2345",
+        "email":"scott@example.com",
+        "notes":[],
+        "address": {
+            "street":"1111 Street Name",
+            "streetPlus":"Apartment C",
+            "city":"Columbus",
+            "state":"Ohio",
+            "zip":"43229",
+            "county":"Franklin"
+        },
+    },
+    "serviceAddress":{
+        //If it's a registered user, service address will be able to be auto-filled by either the main address or the address entered for the contact person (in case they're different) - in this case, we're pretending it pulled from 'contact{address{}}'
+        "street":"1111 Street Name",
+        "streetPlus":"Apartment C",
+        "city":"Columbus",
+        "state":"Ohio",
+        "zip":"43229",
+        "county":"Franklin"
+    },
+    "heard": {
+        "how":"Customer Referral",
+        "more":"Michael Hansen" //this can represent the extra dropdown field for the options that provide it (Customer Referral, Website Directory, etc.) - or will be empty string for those that don't have the extra dropdown field
+    },
+    "notes":"",
+    "discount": {
+        "apply":true,
+        "type":"Monthly Discount"
+    },
+    "refCard":2,//number of referral cards
+    "gift":25,//total dollar amount of gift certificates
+    "fees":{
+        "trip":25,
+        "soil":0
+    },
+    "services":{
+        "standard": {
+            "carpet":[
+                {
+                    "area":"living",
+                    "qty":1,
+                    "price":45
+                },
+                {
+                    "area":"great",
+                    "qty":1,
+                    "price":65
+                },
+                {
+                    "area":"masterBed",
+                    "qty":1,
+                    "price":45
+                },
+                {
+                    "area":"bed",
+                    "qty":5,
+                    "price":25
+                },
+                {
+                    "area":"walkCloset",
+                    "qty":2,
+                    "price":15
+                },
+                {
+                    "area":"closet",
+                    "qty":3,
+                    "price":5
+                },
+                {
+                    "area":"hallway",
+                    "qty":18,
+                    "price":1
+                },
+                {
+                    "area":"stairs",
+                    "qty":24,
+                    "price":3
+                },
+                {
+                    "area":"landing",
+                    "qty":2,
+                    "price":5
+                },
+                {
+                    "area":"basement",
+                    "qty":500,
+                    "price":0.25
+                },
+            ],
+            "rugs":[],
+            "tile":[],
+            "upholstery":[],
+            "total":550,//this will represent dollar amount of all 'standard' services before discounts, taxes, fees, etc
+        },
+        "ducts":{
+            "hvac":[],
+            "dryer":[]
+        }
+    },
+    "schedule":{
+        "standard":{
+            "hours":7.5,//this represents the 'total' from 'standard' services divided by the hourly rate goal ($75 per hour) - rounded up to the nearest half
+            "techNumber":2,//one technician added at each 4 hour mark from 'hours'
+            "technicians":["jmooney", "aames"],
+            "day":"10/18/2020",
+            "time":"13:00",//this represents the start time of the job --- as a note: need to make sure time slots shown available aren't too late (would suck to have a 3.5 hour job in Franklin County at 3pm)
+        },
+        "ducts":{
+
+        }
+    }
+    
+
+}// ends request object
+
+]

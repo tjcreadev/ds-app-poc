@@ -1,0 +1,31 @@
+{
+    "userID": "abc",
+    "customerQuality": 1,
+    "notes":["This is a note", "This is another note"],
+    "businessName":"",
+    "primaryContact": {
+        "firstName":"Scott",
+        "lastName":"Miller",
+        "phone":"614-555-1234",
+        "secondaryPhone":"614-555-2345",
+        "email":"scott@example.com",
+        "notes":[]
+    },
+    "secondaryContact:": {
+        "firstName":"Kathleen",
+        "lastName":"Miller",
+        "phone":"614-555-3245",
+        "secondaryPhone":"614-555-2345",
+        "email":"kathleen@example.com",
+        "notes":[]
+    },
+    "mainAddress":{
+        "street":"1111 Street Name",
+        "streetPlus":"Apartment C",
+        "city":"Columbus",
+        "state":"Ohio",
+        "zip":"43229",
+        "county":"Franklin"
+    },
+    "serviceRequests":["1234", "5432"]
+}
