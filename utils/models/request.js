@@ -6,28 +6,28 @@ const AddressSchema = require('./request-schemas/AddressSchema')
 const Request = mongoose.model('Request', {
     completed: {
         type: Boolean,
-        default: false
+        // default: false
     },
     timestamp: {
         type: Date,
-        required: true
+        // required: true
     },
     contact: {
         firstName: {
             type: String,
-            required: true
+            // required: true
         },
         lastName: {
             type: String,
-            required: true
+            // required: true
         },
         phone: {
             type: String,
-            required: true
+            // required: true
         },
         email: {
             type: String,
-            required: true
+            // required: true
         },
         address: AddressSchema
     },
