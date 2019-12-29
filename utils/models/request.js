@@ -4,6 +4,10 @@ const AddressSchema = require('./request-schemas/AddressSchema')
 
 // Create "Request" model
 const Request = mongoose.model('Request', {
+    completed: {
+        type: Boolean,
+        default: false
+    },
     timestamp: {
         type: Date,
         required: true

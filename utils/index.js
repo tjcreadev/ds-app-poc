@@ -9,7 +9,10 @@ mongoose.connect('mongodb://127.0.0.1:27017/ds-app-poc', {
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
+const path = require('path')
+const publicDirectoryPath = path.join(__dirname, './public')
 app.use(express.json());
+app.use(express.static(publicDirectoryPath))
 // Additional requires/configs:
 const Request = require('./models/request')
 const chalk = require('chalk')
