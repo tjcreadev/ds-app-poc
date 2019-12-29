@@ -1,0 +1,28 @@
+{
+  "name": "ds-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.8.1",
+    "request": "^2.88.0",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node utils/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjcreadev/ds-app-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjcreadev/ds-app-poc/issues"
+  },
+  "homepage": "https://github.com/tjcreadev/ds-app-poc#readme"
+}
