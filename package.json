@@ -14,7 +14,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node utils/index.js"
+    "start": "node utils/index.js",
+    "dbStart": "C:/Users/timot/mongodb/bin/mongod --dbpath C:/Users/timot/mongodb-data"
   },
   "repository": {
     "type": "git",

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
@@ -17,29 +19,87 @@
 
     <form action="/send-form">
 
-        <div id="contact">
+        <div id="contact" class="form-section">
             <div class="form-group">
-                <input id="firstName" type="text" value="Timothy">
+                <input id="firstName" data-sec="contact" type="text" value="Timothy">
                 <label for="firstName">First Name</label>
             </div>
 
             <div class="form-group">
-                <input id="lastName" type="text" value="Stephens">
+                <input id="lastName" data-sec="contact" type="text" value="Stephens">
                 <label for="lastName">Last Name</label>
             </div>
 
             <div class="form-group">
-                <input id="email" type="text" value="tim@test.com">
+                <input id="email" data-sec="contact" type="text" value="tim@test.com">
                 <label for="email">Email</label>
             </div>
 
             <div class="form-group">
-                <input id="phone" type="text" value="614-260-7662">
+                <input id="phone" data-sec="contact" type="text" value="614-260-7662">
                 <label for="phone">Phone</label>
             </div>
-        </div>
-        
+            <!-- Address Fields -->
+            <div class="form-group">
+                <input id="street" data-sec="contactAddress" type="text" value="130 W Heffner Street">
+                <label for="street">Street Address</label>
+            </div>
+            <div class="form-group">
+                <input id="city" data-sec="contactAddress" type="text" value="Delaware">
+                <label for="city">City</label>
+            </div>
+            <div class="form-group">
+                <input id="state" data-sec="contactAddress" type="text" value="Ohio">
+                <label for="state">State</label>
+            </div>
+            <div class="form-group">
+                <input id="zip" data-sec="contactAddress" type="text" value="43015">
+                <label for="zip">Zip</label>
+            </div>
+            
+        </div><!-- contact -->
 
+        <div id="serviceAddress" class="form-section">
+            <div class="form-group">
+                <input id="street" data-sec="serviceAddress" type="text" value="130 W Heffner Street">
+                <label for="street">Street Address</label>
+            </div>
+            <div class="form-group">
+                <input id="city" data-sec="serviceAddress" type="text" value="Delaware">
+                <label for="city">City</label>
+            </div>
+            <div class="form-group">
+                <input id="state" data-sec="serviceAddress" type="text" value="Ohio">
+                <label for="state">State</label>
+            </div>
+            <div class="form-group">
+                <input id="zip" data-sec="serviceAddress" type="text" value="43015">
+                <label for="zip">Zip</label>
+            </div>
+        </div><!-- serviceAddress -->
+        
+        <div id="services" class="form-section">
+            <div id="carpet" class="sub-form-section">
+
+                <div class="form-group">
+                    <input id="living" data-sec="carpet" type="number" value="1">
+                    <label for="street">Living Room</label>
+                </div>
+                <div class="form-group">
+                    <input id="city" data-sec="carpet" type="number" value="Delaware">
+                    <label for="city">City</label>
+                </div>
+                <div class="form-group">
+                    <input id="state" data-sec="carpet" type="number" value="Ohio">
+                    <label for="state">State</label>
+                </div>
+                <div class="form-group">
+                    <input id="zip" data-sec="carpet" type="number" value="43015">
+                    <label for="zip">Zip</label>
+                </div>
+
+            </div><!-- sub-form-section-->
+        </div><!-- services -->
 
 
 

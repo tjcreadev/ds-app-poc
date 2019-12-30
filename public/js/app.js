@@ -2,17 +2,61 @@ let reqId = ''
 
 let obj = {}
 let contact = {}
+let contactAddress = {}
+let serviceAddress = {}
+let carpet = {}
+let rugs = {}
+let upholstery = {}
+let tile = {}
+let ducts = {}
 
-const form = document.querySelector('form');
+const form = document.querySelector('form')
 
 checkFields = () => {
-    form.querySelectorAll('input').forEach(element => {
-        const id = element.id
-        const val = element.value
-    
-        contact[id] = val
+    // Contact
+    form.querySelectorAll("[data-sec='contact']").forEach(element => { 
+        contact[element.id] = element.value
     })
+        //Contact Address
+        form.querySelectorAll("[data-sec='contactAddress']").forEach(element => { 
+            contactAddress[element.id] = element.value
+        })
+    // Service Address
+    form.querySelectorAll("[data-sec='serviceAddress']").forEach(element => { 
+        serviceAddress[element.id] = element.value
+    })
+    // +++ Services
+        // Carpet
+        form.querySelectorAll("[data-sec='carpet']").forEach(element => { 
+            carpet[element.id] = element.value
+        })
+        // Rugs
+        form.querySelectorAll("[data-sec='rugs']").forEach(element => { 
+            rugs[element.id] = element.value
+        })
+        // Upholstery
+        form.querySelectorAll("[data-sec='upholstery']").forEach(element => { 
+            upholstery[element.id] = element.value
+        })
+        // Tile
+        form.querySelectorAll("[data-sec='tile']").forEach(element => { 
+            tile[element.id] = element.value
+        })
+        // Ducts
+        form.querySelectorAll("[data-sec='ducts']").forEach(element => { 
+            ducts[element.id] = element.value
+        })
+
+
+    //Compile object
+    contact['address'] = contactAddress
     obj['contact'] = contact
+    obj['serviceAddress'] = serviceAddress
+    obj['services'] = {}
+    obj.services['carpet'] = carpet
+    obj.services['rugs'] = rugs
+    obj.services['upholstery'] = upholstery
+    console.log(obj)
 }
 
 document.getElementById('clickMe').onclick = () => {
